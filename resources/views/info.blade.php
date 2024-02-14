@@ -180,7 +180,7 @@
                                     <i class="fa fa-star"></i>
                                 </div>
                                 <div class="product-btns">
-                                    <button class="quick-view"><i class="fa fa-shopping-cart"></i><span
+                                    <button class="quick-view" onclick="ajouterPanier('{{ $prod->uuid }}')"><i class="fa fa-shopping-cart"></i><span
                                             class="tooltipp">Ajouter au panier</span></button>
                                     <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Voir
                                             plus</span></button>

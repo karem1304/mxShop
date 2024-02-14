@@ -43,6 +43,7 @@ class PanierController extends Controller
     }
     public function checkout(Request $request){
         $cart = $request->session()->get('cart',[]);
+        // dd($cart);
         return view('checkout',compact('cart'));
     }
 }

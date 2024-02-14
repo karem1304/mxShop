@@ -337,22 +337,4 @@
     </div>
     <!-- /container -->
 </div>
-@csrf
-@endsection
-
-@section('script')
-    <script>
-        function ajouterPanier(index){
-            // alert(index);
-            const key=index;
-            _token=$("input[type='hidden']").attr('value');
-            $.ajax({
-                url: '{{ route('ajoutPanier') }}',
-                method:'POST',
-                dataType: 'JSON',
-                data:{_token,key},
-                success:function(data){console.log(data)},
-            })
-        }
-    </script>
 @endsection

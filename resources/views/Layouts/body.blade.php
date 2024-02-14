@@ -48,7 +48,7 @@
                     <li><a href="#"><i class="fa fa-map-marker"></i> Douala, Cité des palmiers</a></li>
                 </ul>
                 <ul class="header-links pull-right">
-                    <li><a href="#"><i class="fa fa-user-o"></i> Mon compte</a></li>
+                    <li><a href="{{ route('admin.index') }}"><i class="fa fa-user-o"></i> Mon compte</a></li>
                 </ul>
             </div>
         </div>
@@ -105,7 +105,8 @@
                                     </div>
                                     <div class="cart-btns">
                                         <a href="#">View Cart</a>
-                                        <a href="{{ route('checkout') }}">Checkout <i class="fa fa-arrow-circle-right"></i></a>
+                                        <a href="{{ route('checkout') }}">Checkout <i
+                                                class="fa fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -374,13 +375,33 @@
                         );
                         // var somme = 0;
                     });
-                    
+
                 }
             })
 
         }
+
+        function ajouterPanier(index) {
+            // alert(index);
+            const key = index;
+            _token = $("input[type='hidden']").attr('value');
+            $.ajax({
+                url: '{{ route('ajoutPanier') }}',
+                method: 'POST',
+                dataType: 'JSON',
+                data: {
+                    _token,
+                    key
+                },
+                success: function(data) {
+                    console.log(data)
+                },
+            })
+        }
     </script>
     @yield('script')
+@csrf
+
 </body>
 
 </html>
