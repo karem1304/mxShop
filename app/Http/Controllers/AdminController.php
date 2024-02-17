@@ -106,6 +106,11 @@ class AdminController extends Controller
         $formData['brand_id']=$brand->id;
         $formData['category_id']=$category->id;
         $product = Product::create($formData);
+        Image::create([
+            'name'=>'product01.png',
+            'uuid'=>Str::uuid(),
+            'product_id'=>$product->id
+        ]);
         // if($formData['image']){
         //     $image = $formData['image'];
         //     $imageName = time().'.'.$image->getClientOriginalExtension();

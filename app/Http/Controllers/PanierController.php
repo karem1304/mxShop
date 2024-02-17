@@ -11,7 +11,7 @@ class PanierController extends Controller
     private $panierTemporaire = [];
     public function ajout(Request $request){
         // dd($request->key);
-        $nouvelArticle = Product::where('uuid',$request->key)->with('image')->with('color')->with('category')->with('brand')->first();
+        $nouvelArticle = Product::where('uuid',$request->key)->with('image')->with('category')->with('brand')->first();
         $key=$request->key;
         $cart = $request->session()->get('cart',[]);
         if(array_key_exists($key, $cart)){
