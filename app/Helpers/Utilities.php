@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Brand;
 use Carbon\Carbon;
 use App\Models\Category;
 use App\Models\Product;
@@ -31,4 +32,8 @@ function format($number){
 function prod3(){
     $products = Product::take(3)->get();
     return $products;
+}
+function brands(){
+    $brands=Brand::all();
+    return $brands;
 }

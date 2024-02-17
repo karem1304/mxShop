@@ -141,8 +141,8 @@
                                             <button class="quick-view" onclick="ajouterPanier('{{ $prod->uuid }}')"><i
                                                     class="fa fa-shopping-cart"></i><span class="tooltipp">Ajouter au
                                                     panier</span></button>
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Voir
-                                                    plus</span></button>
+                                            <a href="{{ route('info', [$prod->uuid]) }}" class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">Voir
+                                                    plus</span></a>
                                         </div>
                                     </div>
                                     <div class="add-to-cart">

@@ -21,11 +21,10 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        $this->call(BrandSeeder::class);
-        $this->call(ColorSeeder::class);
-        $this->call(CategorySeeder::class);
-        $this->call(ProductSeeder::class);
-        $this->call(ImageSeeder::class);
+        // $this->call(BrandSeeder::class);
+        // $this->call(CategorySeeder::class);
+        // $this->call(ProductSeeder::class);
+        // $this->call(ImageSeeder::class);
         $this->call(UserSeeder::class);
     }
 }

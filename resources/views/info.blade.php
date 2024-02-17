@@ -30,13 +30,13 @@
                 <!-- Product main img -->
                 <div class="col-md-5 col-md-push-2">
                     <div id="product-main-img">
-                        <div id="product-main-img">
+                        {{-- <div id="product-main-img"> --}}
                             @foreach ($product->images()->get() as $image)
                                 <div class="product-preview">
                                     <img src="{{ asset('dist/img/' . $image->name) }}" alt="">
                                 </div>
                             @endforeach
-                        </div>
+                        {{-- </div> --}}
                     </div>
                 </div>
                 <!-- /Product main img -->
@@ -72,30 +72,8 @@
                             <span class="product-available">En Stocke</span>
                         </div>
                         <p>{{ $product->description }}.</p>
-
-                        <div class="product-options">
-                            <label>
-                                Color
-                                <select class="input-select">
-                                    <option value="0">{{ $product->color->name }}</option>
-                                </select>
-                            </label>
-                        </div>
-
-                        <div class="add-to-cart">
-                            <div class="qty-label">
-                                Qty
-                                <div class="input-number">
-                                    <input type="number">
-                                    <span class="qty-up">+</span>
-                                    <span class="qty-down">-</span>
-                                </div>
-                            </div> <br> <br>
-
-                            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> ajouter au panier</button>
-                        </div>
                         <ul class="product-links">
-                            <li>Categori:</li>
+                            <li>Categorie:</li>
                             <li><a
                                     href="{{ route('product', [$product->category->uuid]) }}">{{ $product->category->name }}</a>
                             </li>

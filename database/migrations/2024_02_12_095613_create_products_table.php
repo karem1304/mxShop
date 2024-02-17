@@ -17,14 +17,12 @@ return new class extends Migration
             $table->string('description');
             $table->integer('price');
             $table->integer('firstPrice');
-            $table->bigInteger('color_id')->unsigned();
             $table->bigInteger('brand_id')->unsigned();
             $table->bigInteger('category_id')->unsigned();
             $table->string('uuid');
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('color_id')->references('id')->on('colors');
             $table->foreign('brand_id')->references('id')->on('brands');
             $table->foreign('category_id')->references('id')->on('categories');
         });

@@ -20,7 +20,6 @@ class ProductSeeder extends Seeder
             'description'=> 'CPU 2GHZ, Ram 2GO, Disque dur 500GO, Écran Oled 4K, Clavier retro-éclairé',
             'price'=>450000,
             'firstPrice'=>600000,
-            'color_id'=>5,
             'brand_id'=>1,
             'category_id'=>1,
             'uuid'=>Str::uuid()
@@ -30,7 +29,6 @@ class ProductSeeder extends Seeder
             'description'=> 'CPU 3GHZ, Ram 2GO, Disque dur 1000GO HDD 128GO SSD, Carte graphique NVIDIA QUADRO 5000 4GO Dédiée',
             'price'=>550000,
             'firstPrice'=>650000,
-            'color_id'=>2,
             'brand_id'=>2,
             'category_id'=>2,
             'uuid'=>Str::uuid()
@@ -40,7 +38,6 @@ class ProductSeeder extends Seeder
             'description'=> 'CPU 3GHZ, Ram 2GO, Disque dur 1000GO HDD 128GO SSD, Carte graphique NVIDIA QUADRO 5000 4GO Dédiée',
             'price'=>550000,
             'firstPrice'=>650000,
-            'color_id'=>5,
             'brand_id'=>5,
             'category_id'=>2,
             'uuid'=>Str::uuid()
@@ -50,7 +47,6 @@ class ProductSeeder extends Seeder
             'description'=> 'Disque dur 500GO, Écran Oled 4K, Écran incuver, Water-poof',
             'price'=>350000,
             'firstPrice'=>550000,
-            'color_id'=>4,
             'brand_id'=>6,
             'category_id'=>3,
             'uuid'=>Str::uuid()
@@ -60,7 +56,6 @@ class ProductSeeder extends Seeder
             'description'=> 'Zoom 500%, double objectif',
             'price'=>350000,
             'firstPrice'=>550000,
-            'color_id'=>2,
             'brand_id'=>4,
             'category_id'=>4,
             'uuid'=>Str::uuid()
@@ -70,7 +65,6 @@ class ProductSeeder extends Seeder
             'description'=> '1 jour d\'autonomie',
             'price'=>50000,
             'firstPrice'=>75000,
-            'color_id'=>3,
             'brand_id'=>3,
             'category_id'=>5,
             'uuid'=>Str::uuid()
@@ -80,7 +74,6 @@ class ProductSeeder extends Seeder
             'description'=> 'utile',
             'price'=>5000,
             'firstPrice'=>7500,
-            'color_id'=>3,
             'brand_id'=>7,
             'category_id'=>6,
             'uuid'=>Str::uuid()
